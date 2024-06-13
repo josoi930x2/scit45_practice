@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델</title>
+    <style>
+      /*
+        border-style : 테두리의 스타일을 지정
+        속성값 : soild, dashed, dotted, double, ...
+
+        border-width : 테두리의 두께를 지정
+        border-color : 테두리의 색상을 지정
+        border : 한번에 모든 테두리 속성을 할당
+        */
+
+      .box {
+        border-width: 10px;
+        border-style: solid;
+        border-color: blueviolet;
+        /* border: 1px solid red; */
+        width: 400px;
+        height: 400px;
+        background-color: chartreuse;
+        border-bottom: 5px dotted black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

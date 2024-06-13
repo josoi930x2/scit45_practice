@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image</title>
+  </head>
+  <body>
+    <h1>image</h1>
+    <!-- ＜img＞  : HTML의 이미지를 불러오는 태그 
+    src 속성 : 불러올 이미지의 경로를 지정
+       - 절대경로, 상대경로
+    
+    -->
+
+    <!-- [단축키] alt + shift + 방향키 : 코드 복사 -->
+
+    <p>이미지 출력</p>
+    <img src="../1.image/file/cat.jpg" width="300px" />
+    <img src="../1.image/file/dimsum.jpg" width="300px" />
+    <img src="../1.image/file/latte_art.jpg" width="300px" />
+    <img src="../1.image/file/asfdsdf.jpg" width="300px" alt="동물 사진" />
+    <!-- alt : 이미지를 보여줄 수 없을 때 해당 이미지를 대체할 텍스트를 명시 -->
+
+    <!-- 이미지를 포함한 컨텐츠와 그에 대한 설명을 함께 묶는데 사용 -->
+    <figure>
+      <img src="../1.image/file/latte_art.jpg" width="300px" />
+      <figcaption>이미지 설명</figcaption>
+    </figure>
+
+    <p>웹으로부터 이미지 출력</p>
+    <figure>
+      <img
+        src="https://cdn.pixabay.com/photo/2024/04/18/09/44/arctic-tern-8703910_1280.jpg"
+        width="300px"
+      />
+      <figcaption>이미지 설명</figcaption>
+    </figure>
+
+    <p>iframe 태그를 이용한 유튜브 불러오기</p>
+    <!-- iframe : 외부의 HTML문서, 컨텐츠를 가져올때 사용하는 태그 -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/8kJwTrs6e-4?si=zhElWG7UANPhLeV8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <p>로컬경로를 이용한 HTML문서 불러오기</p>
+    <iframe width="640" height="360" src="../0.route/route.html"></iframe>
+  </body>
+</html>

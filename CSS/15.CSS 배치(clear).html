@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float, clear</title>
+    <style>
+      .container {
+        border: 5px solid red;
+        width: 600px;
+      }
+      .top {
+        background-color: lightcoral;
+        width: 600px;
+      }
+      .left {
+        background-color: lightgreen;
+        width: 400px;
+        height: 100px;
+        float: left;
+      }
+      .right {
+        background-color: lightseagreen;
+        width: 200px;
+        height: 100px;
+        float: right;
+      }
+      /* clear : float속성이 적용된 요소의 아래로 이동*/
+      .clear {
+        background-color: lightslategray;
+        height: 50px;
+        clear: both; /*float이 적용된 left 및 right의 아래에 요소를 표시*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">float: none</div>
+      <div class="left">float: left</div>
+      <div class="right">float: right</div>
+      <div class="clear">float: clear</div>
+    </div>
+  </body>
+</html>

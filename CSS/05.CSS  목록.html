@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>목록 서식</title>
+    <style>
+      .menu {
+        list-style: none;
+      }
+
+      /*
+      ::before
+      ::after
+
+      텍스트, 이미지, 속성을 삽입할 수 있다
+      HTML 구조를 변경하지 않고도 추가 콘텐츠를
+      삽입하고, 스타일을 적용하는 도구
+
+      선택자::가상요소 {
+      속성: 속성 값;
+      }
+
+      */
+
+      .menu li::before {
+        content: "👍 ";
+      }
+
+      .menu li::after {
+        content: " :after";
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>menu-1</li>
+      <li>menu-2</li>
+      <li>menu-3</li>
+      <li>menu-4</li>
+      <li>menu-5</li>
+    </ul>
+  </body>
+</html>

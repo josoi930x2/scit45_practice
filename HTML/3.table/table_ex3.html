@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 조별연습2</title>
+
+    <style>
+      table,
+      td,
+      th {
+        border: 10px solid black;
+        /*
+                separate : 기본값, 각 셀의 경계 분리
+                collapse : 셀의 경계를 하나로 결합
+            */
+        border-collapse: collapse;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        테이블 조별연습2
+      </caption>
+      <tr>
+        <td colspan="2">1</td>
+        <td style="background-color: red" colspan="2" rowspan="2">2</td>
+      </tr>
+
+      <tr>
+        <td colspan="2">3</td>
+      </tr>
+
+      <tr>
+        <td style="background-color: blue">1</td>
+        <td colspan="2" style="width: 70px">2</td>
+        <td style="background-color: yellow">4</td>
+      </tr>
+    </table>
+  </body>
+</html>

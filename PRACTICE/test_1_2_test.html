@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>종합실습1-2</title>
+    <!-- 
+	[다음 연산자를 이용하여 평균 판매량을 구하고, 4분기 판매량을 입력하여
+	평균 판매량의 이상/미달값을 출력하세요.]	
+    질의응답 창을 이용하여 4분기 판매량을 입력하고, 전 분기 평균 판매량보다
+	판매량이 높거나 같을 경우에는 '판매량이 평균 이상입니다.'라고 출력하고,
+	낮을 경우에는 '판매량이 평균 미달입니다'라고 화면에 출력하세요 -->
+    <script>
+      var first = 1200,
+        second = 1300,
+        third = 1000;
+      var avgSales = (first + second + third) / 3; //평균 판매량
+
+      var fourth = prompt("4분기 판매량은?", "0");
+      var msg_1 = "판매량이 평균 이상입니다.",
+        msg_2 = "퍈매량이 평균 미달입니다.";
+
+      if (avgSales < fourth) {
+        var result = msg_1;
+      } else {
+        var result = msg_2;
+      }
+      document.write(result);
+    </script>
+  </head>
+  <body></body>
+</html>

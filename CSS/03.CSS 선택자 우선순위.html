@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 우선순위</title>
+    <!-- 
+        CSS 선택자
+        1. 태그
+        2. 아이디
+        3. 클래스
+        4. 연결선택자(부모와 자식, 자손, 이웃, 인접)
+            >, +, ~
+        5. 속성선택자(해당 속성을 가지고 있는 태그)
+        6. 가상선택자
+            p:hover
+
+        CSS 적용 우선순위
+        1. !important
+            !important 키워드는 우선순위를 무시하고
+            해당 스타일을 강제로 적용
+        2. 인라인 스타일        1000  
+        3. 아이디 선택자(#)     100
+        4. 클래스 선택자(.)     10    ex) .title-box{color:purple;}
+        5. 태그 선택자          1     ex) h3{color:deeppink;}
+        ...        
+     -->
+
+    <style>
+      body {
+        color: blueviolet;
+        font-size: 30px;
+      }
+
+      h1 {
+        color: red;
+        /*!important*/
+      }
+
+      .text {
+        color: blue;
+      }
+
+      #text {
+        color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 적용 우선순위 - 태그</h1>
+    <h1 class="text">CSS 적용 우선순위 - 클래스</h1>
+    <h1 id="text" class="text">CSS 적용 우선순위 - 아이디</h1>
+    <h1 style="color: yellow; font-size: 20px">CSS 적용 우선순위 - 인라인</h1>
+    <h1>CSS 적용 우선순위 - !important</h1>
+  </body>
+</html>

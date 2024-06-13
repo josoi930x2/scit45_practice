@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 조별연습</title>
+
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        /*
+              separate : 기본값, 각 셀의 경계 분리
+              collapse : 셀의 경계를 하나로 결합
+          */
+        border-collapse: collapse;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        테이블 조별연습
+      </caption>
+      <tr>
+        <td colspan="5">1</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td rowspan="2" colspan="2">3</td>
+        <td>4</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+
+      <tr>
+        <td colspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+    </table>
+  </body>
+</html>

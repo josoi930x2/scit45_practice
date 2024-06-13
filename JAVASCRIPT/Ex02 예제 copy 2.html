@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 글자수 표기</title>
+    <script>
+      /*
+    1. 10글자 이상이면 '10글자 이상입니다' 문구 표기
+    2. 10글자 이상이면 input 태그의 테두리or배경색 변경
+    3. 10글자 미만이면 'n글자' 문구를 표기하고 원래 색 변경
+    4. 위 태그를 span태그에 표기
+    */
+
+      function keyup() {
+        let text = document.querySelector("#text");
+        let number = text.value.length;
+
+        let contents = document.querySelector("#contents");
+        if (number >= 10) {
+          contents.innerHTML = "10글자 이상입니다";
+          text.style.backgroundColor = "red";
+        } else {
+          contents.innerHTML = number + "글자";
+          text.style.backgroundColor = "white";
+        }
+      }
+
+      /*
+      < innerHTML >
+      'Element'의 속성으로, element내에 
+      포함된 HTML 또는 XML 마크업을 가져오거나 
+      태그와 함께 입력하여 내용을 직접 설정할 수 있다.
+      < onkeyup  >
+      키를 눌렀다가 뗐을 때 이벤트
+      */
+    </script>
+  </head>
+  <body>
+    <input type="text" id="text" onkeyup="keyup()" />
+    <span id="contents"></span>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+     #sform {
+        display: inline-block;
+        text-align: center;
+        
+      }    
+
+    form{
+        width: 30rem;
+        background-color: white;
+        border-radius: 6spx;
+    }
+
+    .cid{
+      padding: 10px;
+      margin: 10px 20px 30px 40px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+    </style>
+    <script>
+      //윈도우라는 객체로부터 로딩이 될때 함수를 실행시키겠다
+      //(파라미터) 엘리먼트요소를 찾아서 리턴 -> userid 객체에 저장
+      window.onload = function() {
+        // var, let, const(상수값)
+        let userid = document.getElementById('userid');
+        let userpw = document.getElementById('userpw');
+        let checkpw = document.getElementById('checkpw');
+
+        //키보드를 눌렀을 때 이벤트 발생
+        userid.addEventListener('keyup', function() {
+          if(userid.value.length >=8) {
+              userid.style.backgroundColor = 'lightblue';
+          }else {
+              userid.style.backgroundColor = 'lightpink';
+          }
+
+        });
+
+        checkpw.addEventListener('keyup', function() {
+          if(userpw.value == checkpw.value) {
+            checkpw.style.backgroundColor = 'lightblue';
+          }else {
+            checkpw.style.backgroundColor = 'lightpink';
+          }
+        });
+      }
+
+      function infoCheck() {
+        
+        let userid = document.querySelector('#userid');
+        let userpw = document.querySelector('#userpw');
+        let checkpw = document.querySelector('#checkpw');
+        //alert(userid.value);
+       console.log(userid.value);
+       console.log(userpw.value);
+       console.log(checkpw.value);
+       
+       if(userid.value.length < 8) {
+        alert('id는 8자 이상 써라');
+        return false;
+       }
+
+       if(userpw.value == null || checkpw.value == null 
+       || userpw.value == ''|| checkpw.value == '' 
+       || userpw.value != checkpw.value) {
+        alert('pw가 비어있거나 일치하지 않는다');
+        return false;
+       }
+
+       return ture;
+      }
+
+
+    </script>
+
+  </head>
+
+  <div id="sform">
+    <h1>회원가입</h1>
+    <form action="" method="get" onsubmit="return infoCheck();">
+      <fieldset>
+        <label for="id">아이디 </label>
+        <input type="text" name="userid" id="userid" class="cid"  placeholder="아이디는 8자 이상"  />
+        <br />
+
+        <label type="pw">패스워드 </label>
+        <input type="password" name="userpw" id="userpw" class="cid" />
+        <br />
+
+        <label type="pw">비밀번호 확인 </label>
+        <input type="password" name="checkpw" id="checkpw" class="cid" />
+        <br />
+
+        <input type="submit" value="가입" />
+        <input type="reset" value="취소" />
+
+      </fieldset>
+    </form>
+  </div>
+
+  </body>
+</html>

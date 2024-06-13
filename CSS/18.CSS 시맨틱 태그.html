@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시맨틱 태그를 이용한 레이아웃</title>
+    <style>
+      .container {
+        width: 800px;
+        border: 5px dotted black;
+        margin: auto;
+      }
+      header {
+        background-color: lightblue;
+        overflow: hidden;
+      }
+      header article {
+        background-color: lightgoldenrodyellow;
+        width: 200px;
+        height: 100px;
+      }
+      .logo {
+        float: left;
+      }
+      .navi {
+        float: right;
+      }
+      .box1 {
+        background-color: lightpink;
+        height: 300px;
+      }
+
+      main {
+        background-color: aquamarine;
+        overflow: hidden;
+      }
+      main article {
+        width: 33.3%;
+        height: 150px;
+        float: left;
+      }
+      .sub1 {
+        background-color: lightslategrey;
+      }
+      .sub2 {
+        background-color: greenyellow;
+      }
+      .sub3 {
+        background-color: lightcyan;
+      }
+
+      footer {
+        background-color: blueviolet;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <article class="logo">logo</article>
+        <article class="navi">navi</article>
+      </header>
+      <section class="box1">box1</section>
+      <main>
+        <article class="sub1">sub1</article>
+        <article class="sub2">sub2</article>
+        <article class="sub3">sub3</article>
+      </main>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

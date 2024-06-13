@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inline-block 요소</title>
+    <style>
+      /*
+        인라인 블럭 요소
+        inline-block을 사용하면 요소가 인라인요소처럼 같은 줄에
+        배치되면서도 블럭요소처럼 너비와 높이를 지정할 수 있다.
+        - 한 줄에 여러개의 엘리먼트를 배치
+        - 크기값을 가질 수 있음 
+        */
+      .inline-block {
+        /*
+        display속성은 요소의 박스 생성 방식과 레이아웃을 결정
+        HTML요소가 페이지에 어떻게 표시될지를 정의하며,
+        요소의 기본 레이아웃 동작을 변경하는데 사용
+        display : none, block, inline, inline-block, flex, grid, table...
+        */
+
+        /* line-height : 줄간격 */
+
+        display: inline-block;
+        width: 150px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: 5px solid blue;
+        text-align: center;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inline-block">box1</div>
+    <div class="inline-block">box2</div>
+    <div class="inline-block">box3</div>
+    <div class="inline-block">box4</div>
+    <div class="inline-block">box5</div>
+  </body>
+</html>

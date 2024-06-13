@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자</title>
+    <style>
+      /* 태그 선택자 - 특정 태그를 사용한 요소에 스타일 적용*/
+      p {
+        text-align: center;
+        color: red;
+      }
+
+      /*아이디 선택자 - 특정 부분에 스타일 적용*/
+      #pid {
+        text-align: left;
+        color: green;
+      }
+
+      /*클래스 선택자 - 특정 부분에 스타일 적용*/
+      .pclass {
+        text-align: right;
+        color: yellow;
+      }
+      /*그룹 선택자 - 둘 이상 요소에 같은 스타일 적용*/
+      p,
+      h1 {
+        color: darkorange;
+      }
+      /*자손(자식, 손자 포함) 선택자 */
+      p b {
+        color: blue;
+      }
+
+      /* 전체 선택자 - 모든 요소에 스타일 적용  ,line-height : 줄간격*/
+      * {
+        font-size: 25px;
+        line-height: 35px;
+      }
+
+      /* 속성 선택자 */
+      input[type="text"] {
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      동해물과 백두산이 <b>마르고 닳도록</b>
+      <span><b>하느님</b>이 보우하사</span>
+      우리나라 만세
+    </p>
+    <p id="pid">HTML은 재밌다</p>
+    <p class="pclass">CSS도 재밌다</p>
+    <div class="pclass">JavaScript도 재밌다</div>
+    <h1>프로그래밍 언어</h1>
+    <p>HTML 시험 준비</p>
+    INPUT태그 : <input type="text" size="20" />
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>테이블 연습</title>
+    <!-- 
+      <tr>
+      table row, 행
+      [th] or [td] 태그가 반드시 있어야 함 
+
+      <td>
+      table data, 열
+
+      <th>
+      table header, 타이틀
+
+      단축키 : tr>td*3
+       <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+     -->
+
+    <style>
+      table,
+      td,
+      th {
+        border: 1px double black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+
+    <style>
+      table td {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        <strong>Mordern Browser</strong>
+        <p>국내에서 자주 사용하는 모던 브라우저</p>
+      </caption>
+      <tr>
+        <th>브라우저</th>
+        <th>제조업체</th>
+        <th>다운로드</th>
+      </tr>
+
+      <tr>
+        <td>크롬</td>
+        <td>Google</td>
+        <td>http://www.google.com/chrome</td>
+      </tr>
+
+      <tr>
+        <td>파이어폭스</td>
+        <td>Mozila</td>
+        <td>http://www.mozila.org/ko/firefox</td>
+      </tr>
+
+      <tr>
+        <td>엣지</td>
+        <td>Microsoft</td>
+        <td>http://www.microsoft.com</td>
+      </tr>
+    </table>
+
+    <p></p>
+
+    <table>
+      <tr>
+        <td colspan="4" style="width: 200px; background-color: red">1</td>
+      </tr>
+
+      <tr>
+        <td colspan="2" rowspan="2" style="width: 100px">2</td>
+        <td style="width: 50px">3</td>
+        <td style="width: 50px">4</td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+
+      <tr>
+        <td colspan="2">10</td>
+        <td colspan="2">12</td>
+      </tr>
+    </table>
+  </body>
+</html>

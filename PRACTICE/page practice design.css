@@ -1,0 +1,118 @@
+#side {
+  float: left;
+  text-align: center;
+  width: 280px;
+  background-color: silver;
+  padding: 120px 0;
+}
+
+#main {
+  float: left;
+  margin-left: 100px;
+  width: 1000px;
+}
+
+#side img {
+  width: 100px;
+  height: 100px;
+}
+
+#side > #phoneNumber,
+#email {
+  margin: 100px 0;
+}
+
+#main > header {
+  padding: 50px;
+}
+
+#main > header article {
+  width: 300px;
+  height: 100px;
+  float: left;
+  text-align: center;
+}
+
+#main > header article a {
+  padding: 40px 80px;
+  color: aqua;
+  text-decoration-line: none;
+}
+
+#main > header article a:hover {
+  color: black;
+  background-color: darkcyan;
+}
+
+#main > #info {
+  float: left;
+}
+
+#main > #info > #simpleIntro {
+  float: right;
+  margin-right: 100px;
+}
+
+#main > #info > #simpleIntro > p {
+  font-weight: bold;
+  color: darkorange;
+}
+
+#main > #info > #profile {
+  float: left;
+}
+
+#main > #info > #profile > div {
+  float: left;
+  width: 500px;
+  height: 300px;
+}
+
+#main > #info > #profile > #myImg > img {
+  margin-left: 100px;
+}
+
+#main > #info > #profile > #myProfile > div {
+  float: left;
+  width: 100%;
+  height: 50px;
+  padding: 20px 0 0 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#main > #info > #profile > #myProfile > ul {
+  float: left;
+  list-style: none;
+  width: 120px;
+  height: 200px;
+}
+
+#main > #info > #profile > #myProfile > ul > li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#main > #info > #profile > #myProfile > #infoMenu > li {
+  color: lightskyblue;
+}
+
+#main > #info > #tmi {
+  float: left;
+}
+
+#main > #info > #tmi > ul {
+  float: left;
+  list-style: none;
+  width: 200px;
+  height: 300px;
+}
+
+#main > #info > #tmi > ul > li {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.color_blue {
+  color: blue;
+}

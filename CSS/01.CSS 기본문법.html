@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01.CSS 기본문법</title>
+    <link rel="Stylesheet" href="../css.folder/style01.css" />
+  </head>
+  <body>
+    <h1>내부 Stylesheet</h1>
+    <h2>외부 Stylesheet</h2>
+    <h3 style="font-size: 80px; color: red">인라인 Style</h3>
+    <style>
+      /* 주석 */
+      body {
+        background-color: beige;
+      }
+
+      h1 {
+        font-size: 50px;
+        color: pink;
+      }
+    </style>
+
+    <!-- 
+        CSS
+        CSS(Cascading Style Sheet)는 HTML이나 XML로
+        작성된 문서의 시각적 표현을 정의하는 스타일 시트 언어,
+        CSS를 사용하여 웹페이지의 레이아웃, 색상, 글꼴 등을
+        쉽게 조정할 수 있음.
+        일부 CSS속성은 부모 요소로부터 자식 요소에 상속.
+
+        선택자 {
+            스타일 속성 : 속성 값
+
+            *스타일을 적용시키는 방법
+            1. 인라인 방식(직접 태그안에 style 속성으로 접근)
+            2. <head>태그 안에 <style>태그 내에 선택자로 접근
+            3. 외부파일에서 선택자로 접근하여 변경
+
+        }
+
+        교재 295p
+        [블록 레벨 태그]
+        <p>, <h1>~<h6>, <ul>, <ol>, <div>, <blockquote>, 
+        <form>, <hr>, <table>, <fieldset>, <address>
+        [인라인 레벨 태그]
+        <img>, <object>, <br>, <sub>, <sup>, <span>, <input>, 
+        <textarea>, <label>, <button>  
+
+
+
+
+
+
+     -->
+  </body>
+</html>

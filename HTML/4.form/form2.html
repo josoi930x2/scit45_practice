@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 종류</title>
+    <script>
+      function btn() {
+        alert("버튼1 눌렀음");
+      }
+    </script>
+  </head>
+  <body>
+    <form action="" method="get">
+      <fieldset>
+        <legend>분류1</legend>
+        입력란 <input type="text" name="input" value="홍길동" readonly /><br />
+        비밀번호 입력란 <input type="password" size="10" required /><br />
+        Email 입력란 <input type="email" /><br />
+        숫자 입력란 <input type="number" /> <br />
+        전화번호 입력란 <input type="tel" /><br />
+        버튼 <input type="button" value="버튼1" onclick="btn();" /><br />
+        체크박스
+        <input type="checkbox" name="checkbox" value="11" checked />질문내용1
+        <input type="checkbox" name="checkbox" value="22" /> 질문내용2<br />
+
+        색상 <input type="color" /> <br />
+        날짜 <input type="date" /><br />
+        날짜시간<input type="datetime-local" /><br />
+        파일 <input type="file" /><br />
+        이미지
+        <input type="image" src="../1.image/file/cat.jpg" width="300px" /><br />
+        히든 <input type="hidden" value="서버측에 보낼 값" /><br />
+      </fieldset>
+
+      <!-- radio : 중복체크를 막는 설정, name값이 같아야 적용됨 -->
+      <!-- hidden : 사용자에게는 보이지않지만 서버로 넘겨지는 값을 가짐 -->
+
+      <fieldset>
+        <legend>분류2</legend>
+        월 <input type="month" /><br />
+        라디오 <input type="radio" name="radio" value="1" />선택1
+        <input type="radio" name="radio" value="2" />선택2
+        <input type="radio" name="radio" value="3" />선택3<br />
+        범위 <input type="range" value="0" max="10" /><br />
+        검색 <input type="search" placeholder="검색어를 입력하세요" /><br />
+        시간 <input type="time" /><br />
+        URL <input type="url" /> <br />
+        주 <input type="week" /> <br />
+        셀렉트
+        <select name="select" multiple>
+          <option value="1">선택1</option>
+          <option value="2">선택2</option>
+          <option value="3" selected>선택3</option>
+        </select>
+        <br />
+        여러 줄 입력란
+        <textarea cols="50" rows="10"></textarea><br />
+        <button type="button">버튼2</button>
+      </fieldset>
+
+      <input type="submit" value="전송하기" />
+      <input type="reset" value="재입력하기" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 태그 예제</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <fieldset style="width: 50px">
+        <legend>회원정보</legend>
+        아이디 : <input type="text" name="id" value="hong" /><br />
+        패스워드 : <input type="password" name="password" />
+      </fieldset>
+
+      <fieldset style="width: 350px">
+        <legend>과목</legend>
+        HTML<input type="checkbox" name="subject" value="HTML" /> CSS<input
+          type="checkbox"
+          name="subject"
+          value="CSS"
+          checked
+        />
+        JavaScript<input type="checkbox" name="subject" value="JavaScript" />
+
+        <br />
+        상<input type="radio" name="radio" value="상" /> 중<input
+          type="radio"
+          name="radio"
+          value="중"
+        />
+        하<input type="radio" name="radio" value="하" /><br />
+
+        <label>what is your favorite programming language?</label>
+        <input type="text" list="language" />
+
+        <datalist id="language">
+          <option value="Java"></option>
+          <option value="Python"></option>
+          <option value="C"></option>
+          <option value="Swift"></option>
+          <option value="Ruby"></option>
+        </datalist>
+        <br />
+
+        <input type="submit" value="전송하기" />
+        <input type="reset" value="취소하기" />
+      </fieldset>
+    </form>
+  </body>
+</html>

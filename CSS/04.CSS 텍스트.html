@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 서식</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+          font-size : 텍스트의 크기
+          font-weight : 글자의 두께 100~900
+                ,bold(700), bolder, lighter, ...
+          font-family : 글꼴을 지정
+          font-style : 문자 스타일(nomal, italic)
+          color : 글꼴의 색상을 지정
+          text-decortation : 텍스트의 줄 표시/제거
+          text-transform : 대소문자 변환
+          text-shadow : 텍스트 그림자 효과      
+      
+      */
+      body {
+        color: crimson;
+        font-family: 궁서;
+        font-style: italic;
+      }
+
+      a {
+        color: blue;
+        text-decoration: line-through;
+      }
+
+      h1 {
+        font-size: 30px;
+        font-weight: bolder; /* 글씨의 굵기(웨이트)를 설정 */
+      }
+
+      p.copy {
+        text-transform: capitalize; /*단어의 첫번째 글자를 대문자로*/
+        text-align: center;
+        text-shadow: 1px 1px blue;
+      }
+
+      #pid {
+        font-family: Dongle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 서식 관련 속성</h1>
+    <a href="">네이버 바로가기</a>
+
+    <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+    <p class="copy">copyright all Reserved by abcde 2024</p>
+    <p id="pid">Web font - 사용</p>
+  </body>
+</html>
