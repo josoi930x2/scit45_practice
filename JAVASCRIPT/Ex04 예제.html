@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>데이터 출력 예제</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+
     <script>
       function openList() {
         let list = [
@@ -13,15 +21,15 @@
         ];
 
         let str = "<table>";
-        str += "<tr><th>이름</th><th>등급</th><th>가입일</th>";
-        for (let i = 0; i < tablelist.length; i++) {
+        str += "<tr><th>이름</th><th>등급</th><th>가입일</th></tr>";
+        for (let i = 0; i < list.length; i++) {
           str += `<tr>`;
           str += `<td>${list[i]["이름"]}</td>`;
           str += `<td>${list[i]["등급"]}</td>`;
           str += `<td>${list[i]["가입일"]}</td>`;
           str += `</tr>`;
-          str += `</table>`;
         }
+        str += `</table>`;
 
         document.querySelector("#target").innerHTML = str;
         document.querySelector("#target").style.display = "block";
@@ -35,6 +43,19 @@
   <body>
     <input type="button" value="정보 보기" onclick="openList()" />
     <input type="button" value="정보 닫기" onclick="closeList()" />
-    <div id="target"></div>
+    <div id="target">
+      <!-- <table>
+        <tr>
+          <th>이름</th>
+          <th>등급</th>
+          <th>가입일</th>
+        </tr>
+        <tr>
+          <td>반복하면서 이름</td>
+          <td>반복하면서 등급</td>
+          <td>반복하면서 가입일</td>
+        </tr>
+      </table> -->
+    </div>
   </body>
 </html>
