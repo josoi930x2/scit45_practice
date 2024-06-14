@@ -8,12 +8,14 @@
     <!-- CSS 파일 가져오기 -->
     <link rel="stylesheet" href="../HOMEWORK/subject_style.css" />
     <!-- JS 파일 가져오기 -->
+    <script src="../HOMEWORK/subject_script.js"></script>
   </head>
   <body>
     <div id="frame">
       <!-- ---------------------header--------------------- -->
       <header>
-        <h1>[정보처리 기사 필기 결과]</h1>
+        <!-- 제목 태그 생성 -->
+        <h1 id="title">[정보처리 기사 필기 결과]</h1>
 
         <h2># 가채점 예상 점수를 입력하세요</h2>
       </header>
@@ -23,17 +25,28 @@
         <h4>맞춘 개수</h4>
 
         <!-- 목록태그 생성 -->
-        <ul>
-          <li>1.소프트웨어 설계:</li>
-          <li>2.소프트웨어 개발:</li>
-          <li>3.데이터베이스 구축:</li>
-          <li>4.프로그래밍 언어활용:</li>
-          <li>5.정보시스템 구축관리:</li>
-        </ul>
+        <ol>
+          <li>소프트웨어 설계:</li>
+          <li>소프트웨어 개발:</li>
+          <li>데이터베이스 구축:</li>
+          <li>프로그래밍 언어활용:</li>
+          <li>정보시스템 구축관리:</li>
+        </ol>
+
         <!-- 점수 입력태그 생성 -->
+        <span
+          >20문제 중 <input type="text" placeholder="0" id="correct" /> 개</span
+        >
         <!-- 예상점수 출력용 텍스트태그 생성 -->
+        <span class="expected">[예상점수] 75점</span>
         <!-- 최종결과 출력용 버튼 생성 -->
-        <input type="button" id="result" value="최종 결과 확인" />
+        <br />
+        <input
+          type="button"
+          id="result_check"
+          value="최종 결과 확인"
+          onclick="btn();"
+        />
       </main>
 
       <!-- ---------------------footer--------------------- -->
@@ -44,7 +57,12 @@
         </h4>
 
         <!-- 목록태그 생성 -->
+        <ul id="total">
+          <li>평균:</li>
+          <li>과락된 과목수:</li>
+        </ul>
         <!-- 최종결과 출력용 영역 태그 및 하위 태그 생성 -->
+        <p id="result">불합격</p>
       </footer>
     </div>
   </body>
