@@ -1,16 +1,64 @@
 // javascript 작성
 
-/*
-1)	점수를 입력하는 입력박스에 숫자를 입력할 경우에만 이미지와 같이 예상점수를 1문제당 5점으로 계산하여 출력
+function keyup() {
+  let inputs = document.querySelectorAll(".correct"); // 모든 입력 필드 선택
+  for (let i = 0; i < inputs.length; i++) {
+    let input = inputs[i]; //n번째 배열을 input에 저장
+    let text = input.value; //n번째 배열의 값에 있는 맞춘 개수(숫자) 추출
+    let target = document.getElementById(`mark${i + 1}`); // 해당 입력 필드에 맞는 예상 점수 출력 위치 선택
 
-2)	점수를 입력하는 입력박스에 문자를 입력하면 ‘숫자를 입력하세요’ 문구를 출력하고, 
-20을 넘어갈 경우 ‘각 과목당 맞춘 문제수(0~20)를 입력하세요’ 문구를 출력하고, 
-해당 입력박스의 값을 null로 초기화 시키고 예상점수 문구를 안보이도록 설정.
+    if (text === "") {
+      // 맞춘 개수가 빈칸이면 예상 점수가 안보이도록
+      target.style.display = "none";
+      continue;
+    }
 
-3)	최종 결과 확인 버튼을 누를 경우에만 최종 결과가 보이도록 클릭이벤트를 설정하고 
-해당 최종 결과 영역에 display 속성값 부여
+    if (isNaN(text)) {
+      // 맞춘 개수가 is Not a Number 즉, 숫자가 아닐경우 true반환
+      alert("숫자를 입력하세요");
+      input.value = ""; //맞춘 개수 text창 초기화
+      target.style.display = "none";
+      continue;
+    }
 
-4)	최종 결과 영역에 평균, 과락된 과목 수 의 값을 계산하여 출력
+    let number = parseInt(text);
+    if (number < 0 || number > 20) {
+      alert("각 과목당 맞춘 문제수(0~20)를 입력하세요");
+      input.value = "";
+      target.style.display = "none";
+    } else {
+      let score = number * 5;
+      target.innerHTML = "[예상점수] " + score + "점";
+      target.style.display = "inline-block";
+    }
+  }
+}
 
-5)	DOM의 element들을 JavaScript로 불러와 활용 및 조작
- */
+function btn() {
+  let inputs = document.querySelectorAll(".correct");
+  let total = 0;
+  let failCount = 0;
+
+  for (let i = 0; i < inputs.length; i++) {
+    let input = inputs[i];
+    let score = parseInt(input.value) * 5;
+
+    if (score < 40) {
+      failCount++; // 40점 이하인 과목수
+    }
+    total += score; // 평균을 구하기 위한 합계
+  }
+
+  let average = total / 5;
+  let ultotal = document.getElementById("total");
+  ultotal.innerHTML = `<li>평균: ${average}</li><li>과락된 과목수: ${failCount}</li>`;
+
+  let result = document.getElementById("result");
+  if (failCount > 0 || average < 60) {
+    result.innerHTML = "불합격";
+  } else {
+    result.innerHTML = "합격";
+  }
+
+  document.querySelector("footer").style.display = "block";
+}

@@ -6,39 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Front-End</title>
     <!-- CSS 파일 가져오기 -->
-    <link rel="stylesheet" href="../HOMEWORK/subject_style.css" />
+    <link
+      rel="stylesheet"
+      href="../SCIT45_오전_조소이/SCIT45_오전_조소이.css"
+    />
     <!-- JS 파일 가져오기 -->
-    <script src="../HOMEWORK/subject_script.js"></script>
+    <script src="../SCIT45_오전_조소이/SCIT45_오전_조소이.js"></script>
   </head>
   <body>
     <div id="frame">
       <!-- ---------------------header--------------------- -->
       <header>
         <!-- 제목 태그 생성 -->
-        <h1>[정보처리 기사 필기 결과]</h1>
-
-        <h2># 가채점 예상 점수를 입력하세요</h2>
+        <h1 id="h1">[ 종합 평가 점수 ]</h1>
       </header>
 
       <!-- --------------------- main --------------------- -->
       <main>
-        <h4 id="h4">맞춘 개수</h4>
-
         <!-- 목록태그 생성 -->
         <table>
           <tr>
             <td id="td1">
               <ol>
-                <li>소프트웨어 설계:</li>
-                <li>소프트웨어 개발:</li>
-                <li>데이터베이스 구축:</li>
-                <li>프로그래밍 언어활용:</li>
-                <li>정보시스템 구축관리:</li>
+                <li>Java Fundamental :</li>
+                <li>Oracle Database :</li>
+                <li>HTML, CSS :</li>
+                <li>JavaScript :</li>
+                <li>Basic Test :</li>
+                <li>Team Project :</li>
+                <li>출석률 :</li>
               </ol>
             </td>
 
             <td id="td2">
-              20문제 중
               <input
                 type="text"
                 placeholder="0"
@@ -46,9 +46,7 @@
                 id="sub1"
                 onkeyup="keyup()"
               />
-              개 <span class="expected" id="mark1"></span><br />
-
-              20문제 중
+              점<br />
               <input
                 type="text"
                 placeholder="0"
@@ -56,9 +54,7 @@
                 id="sub2"
                 onkeyup="keyup()"
               />
-              개 <span class="expected" id="mark2"></span><br />
-
-              20문제 중
+              점<br />
               <input
                 type="text"
                 placeholder="0"
@@ -66,9 +62,7 @@
                 id="sub3"
                 onkeyup="keyup()"
               />
-              개 <span class="expected" id="mark3"></span><br />
-
-              20문제 중
+              점<br />
               <input
                 type="text"
                 placeholder="0"
@@ -76,9 +70,8 @@
                 id="sub4"
                 onkeyup="keyup()"
               />
-              개 <span class="expected" id="mark4"></span><br />
-
-              20문제 중
+              점
+              <br />
               <input
                 type="text"
                 placeholder="0"
@@ -86,7 +79,23 @@
                 id="sub5"
                 onkeyup="keyup()"
               />
-              개 <span class="expected" id="mark5"></span>
+              점<br />
+              <input
+                type="text"
+                placeholder="0"
+                class="correct"
+                id="sub6"
+                onkeyup="keyup()"
+              />
+              점<br />
+              <input
+                type="text"
+                placeholder="0"
+                class="correct"
+                id="sub7"
+                onkeyup="keyup()"
+              />
+              %
             </td>
           </tr>
         </table>
@@ -96,22 +105,22 @@
         <input
           type="button"
           id="result_check"
-          value="최종 결과 확인"
+          value="결과 확인"
           onclick="btn();"
         />
+
+        <h4>
+          ※각 과목은 10%, 프로젝트 2회 각 20%, 출석률 20%로 총 100%로 점수
+          환산함
+        </h4>
       </main>
 
       <!-- ---------------------footer--------------------- -->
       <footer>
-        <h2># 최종결과</h2>
-        <h4>
-          합격: 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.
-        </h4>
+        <h1># 최종 결과:</h1>
 
-        <!-- 목록태그 생성 -->
-        <ul id="total"></ul>
         <!-- 최종결과 출력용 영역 태그 및 하위 태그 생성 -->
-        <p id="result"></p>
+        <span id="result"></span>
       </footer>
     </div>
   </body>

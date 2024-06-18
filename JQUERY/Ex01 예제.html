@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jq_folder/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btn").click(function () {
+          let url = $(this).attr("url");
+          $("#alink").attr("href", url);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h3>[j-Query 예제]</h3>
+    <p>
+      <input
+        type="button"
+        value="네이버"
+        class="btn"
+        url="http://www.naver.com"
+      />
+      <input
+        type="button"
+        value="네이트"
+        class="btn"
+        url="http://www.nate.com"
+      />
+      <input
+        type="button"
+        value="구글"
+        class="btn"
+        url="http://www.google.com"
+      />
+    </p>
+
+    <a href="" id="alink" target="_blank">이동하기</a>
+  </body>
+</html>
