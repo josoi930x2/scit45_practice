@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Front-End</title>
+    <link rel="stylesheet" href="./subject_style.css" />
+    <script src="./subject_script.js"></script>
+  </head>
+  <body>
+    <div id="frame">
+      <!-- ---------------------header--------------------- -->
+      <header>
+        <h1>[ 정보처리 기사 필기 결과 ]</h1>
+        <h2># 가채점 예상 점수를 입력하세요</h2>
+      </header>
+
+      <!-- --------------------- main --------------------- -->
+      <main>
+        <h4 class="blue">맞춘 개수</h4>
+        <ol>
+          <li>
+            소프트웨어 설계:&emsp;&emsp;&emsp;&emsp;20문제 중
+            <input
+              type="text"
+              placeholder="0"
+              id="input1"
+              onkeyup="scoreInput(1);"
+            />&nbsp;개
+            <span class="blue" id="score1" style="display: none"></span>
+          </li>
+          <li>
+            소프트웨어 개발:&emsp;&emsp;&emsp;&emsp;20문제 중
+            <input
+              type="text"
+              placeholder="0"
+              id="input2"
+              onkeyup="scoreInput(2);"
+            />&nbsp;개
+            <span class="blue" id="score2"></span>
+          </li>
+          <li>
+            데이터베이스 구축:&emsp;&emsp;&emsp;20문제 중
+            <input
+              type="text"
+              placeholder="0"
+              id="input3"
+              onkeyup="scoreInput(3);"
+            />&nbsp;개
+            <span class="blue" id="score3"></span>
+          </li>
+          <li>
+            프로그래밍 언어활용:&emsp;&emsp;20문제 중
+            <input
+              type="text"
+              placeholder="0"
+              id="input4"
+              onkeyup="scoreInput(4);"
+            />&nbsp;개
+            <span class="blue" id="score4"></span>
+          </li>
+          <li>
+            정보시스템 구축관리:&emsp;&emsp;20문제 중
+            <input
+              type="text"
+              placeholder="0"
+              id="input5"
+              onkeyup="scoreInput(5);"
+            />&nbsp;개
+            <span class="blue" id="score5"></span>
+          </li>
+        </ol>
+        <input
+          type="button"
+          value="최종 결과 확인"
+          id="btn-1"
+          onclick="resultCheck()"
+        />
+      </main>
+
+      <!-- ---------------------footer--------------------- -->
+      <footer>
+        <h2># 최종결과</h2>
+        <h4 class="blue">
+          합격: 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점 이상.
+        </h4>
+        <ul>
+          <li>평균: <span id="scoreAvg"></span></li>
+          <li>과락된 과목 수: <span id="failCount"></span></li>
+        </ul>
+        <div id="resultDiv">
+          <p id="finalResult"></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

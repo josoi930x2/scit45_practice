@@ -1,0 +1,55 @@
+header > h1 {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+}
+.blue {
+  color: blue;
+}
+li > input {
+  width: 80px;
+  text-align: right;
+  --display: inline-block;
+}
+#btn-1 {
+  align-items: center;
+  background-color: aqua;
+  font-weight: bold;
+  border-radius: 8px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#frame {
+  width: 800px;
+  height: 620px;
+  border: 1px dotted gray;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  --display: block;
+  background-color: azure;
+  padding: 10px 0px 10px 30px;
+}
+footer {
+  display: none;
+}
+#finalResult {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  color: red;
+  align-self: center;
+}
+#resultDiv {
+  width: 100px;
+  height: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  background-color: gainsboro;
+}

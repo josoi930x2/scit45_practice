@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>테스트</h1>
+      <span id="result"></span>
+    </div>
+  </body>
+
+  <script>
+    let result = document.getElementById("result");
+    let a = 0;
+    let b = 2;
+    let c = false || 0;
+    let d = isNaN(b) || b;
+    let e = isNaN(a) || a;
+
+    result.innerHTML =
+      `b 결과 : ${b}` +
+      `<br>c 결과 : ${c}` +
+      `<br>d 결과 : ${d}` +
+      `<br>d 결과 : ${e}`;
+
+    // https://ko.javascript.info/logical-operators
+  </script>
+</html>

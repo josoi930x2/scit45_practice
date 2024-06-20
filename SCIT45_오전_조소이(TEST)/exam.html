@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합평가 결과</title>
+    <link rel="stylesheet" href="./exam.css">
+    <script defer src="./exam.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 id="title">[ 종합 평가 점수 ]</h2>
+        <ol>
+            <li>
+                <span>Java Fundamental : </span>
+                <input type="text" class="grade" placeholder="0"> 점
+            </li>
+            <li>
+                <span>Oracle Database : </span>
+                <input type="text" class="grade" placeholder="0"> 점
+            </li>
+            <li>
+                <span>HTML, CSS : </span>
+                <input type="text" class="grade" placeholder="0"> 점
+            </li>
+            <li>
+                <span>JavaScript : </span>
+                <input type="text" class="grade" placeholder="0"> 점
+            </li>
+            <li>
+                <span>Basic Test : </span>
+                <input type="text" class="project" placeholder="0"> 점
+            </li>
+            <li>
+                <span>Team Project: </span>
+                <input type="text" class="project" placeholder="0"> 점
+            </li>
+            <li>
+                <span>출 석 률: </span>
+                <input type="text" class="attend" placeholder="100"> %
+            </li>
+        </ol>
+        <input type="button" id="confirm" value="결과 확인">
+        <p class="msg">※ 각 과목은 10%, 기초평가 및 팀프로젝트는 각 20%, 출석률 20%로 총 100%로 점수 환산함</p>
+
+        <div class="resultBox">
+            <h2 id="result"># 최종 결과:</h2>&nbsp;
+            <span>종합 평가 점수: <span id="total">0</span>점
+        </div>
+
+    </div>
+</body>
+
+</html>
